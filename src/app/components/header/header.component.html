@@ -1,0 +1,100 @@
+<mat-toolbar color="secondary">
+  <button (click)="drawer.toggle()"
+    mat-icon-button
+    class="example-icon "
+    aria-label="Example icon-button with menu icon"
+
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="dropdown">
+    <button  data-bs-toggle="dropdown" mat-icon-button class="example-icon ">
+        <mat-icon matBadge="4" matBadgeColor="warn"  color="primary">notifications</mat-icon></button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item notifications-header" href="#"><h3>You have 4 new notifications</h3></a></li>
+      <li><a class="dropdown-item" href="#"> 
+        <div>
+        <img  class="user_img" src="../../../assets/notify.jpg" alt="">
+        <div class="notifications_desc">
+        <p >lorem kfj fkgjfg rtrt r</p>
+        <p>
+        1 hour ago
+        </p>
+    </div>
+   
+      </div></a></li>
+      <li><a class="dropdown-item" href="#">Link 3</a></li>
+    </ul>
+  </div>
+  <button mat-icon-button class="example-icon " >
+    <mat-icon matBadge="4" matBadgeColor="warn" color="primary">mail</mat-icon>
+  </button>
+  <button mat-icon-button  class="example-icon ">
+    <mat-icon matBadge="4" matBadgeColor="warn" color="primary">task_alt</mat-icon>
+  </button>
+  
+  <span class="example-spacer">
+    <div class="form-group" >
+    
+      <input type="text"  class="form-control mx-5 my-5 p-2 float-end me-5" placeholder="Search Books">
+      <mat-icon class="search-icon" color="primary">search</mat-icon> 
+ </div>
+
+  </span>
+  <a href="#">
+    <img src="../../../assets/admin.jpg" class="rounded-circle me-5" alt="" [matMenuTriggerFor]="menu" width="40" height="40">
+  </a>
+ 
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item> <mat-icon>settings</mat-icon>Setting</button>
+    <button mat-menu-item><mat-icon>account_circle</mat-icon>  My Account</button>
+    <button mat-menu-item> <mat-icon>work</mat-icon> Profile</button>
+    <button mat-menu-item><mat-icon>logout</mat-icon>Logout</button>
+  </mat-menu>
+<mat-drawer-container autosize hasBackdrop="false" >
+  <mat-drawer #drawer [opened]="false" mode="side"> 
+    <mat-nav-list>
+      <mat-list-item>
+        <button mat-button>
+          <mat-icon>dashboard</mat-icon>Dashboard
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button >
+          <mat-icon>home</mat-icon>home
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button>
+          <mat-icon>sell</mat-icon>Bestsellers
+        </button>
+      </mat-list-item>
+      
+      <mat-list-item>
+        <button mat-button >
+          <mat-icon>favorite</mat-icon>Wishlist
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button  >
+          <mat-icon>shopping_cart</mat-icon>My cart
+        </button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="orders" >
+          <mat-icon>shopping_bag</mat-icon>Orders
+        </button>
+      </mat-list-item>
+     </mat-nav-list>  
+  </mat-drawer>
+  <mat-drawer-container>
+   <div style="text-align: center;height:100%;">
+    <router-outlet></router-outlet>
+  </div>
+    <app-cards></app-cards>
+   
+  </mat-drawer-container>
+</mat-drawer-container>
+
+
