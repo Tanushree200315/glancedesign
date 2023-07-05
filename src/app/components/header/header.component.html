@@ -1,30 +1,16 @@
 <mat-toolbar color="secondary">
   <button (click)="drawer.toggle()"
     mat-icon-button
-    class="example-icon "
+    class="example-icon ms-5"
     aria-label="Example icon-button with menu icon"
 
   >
-    <mat-icon>menu</mat-icon>
+    <mat-icon >menu</mat-icon>
   </button>
   <div class="dropdown">
-    <button  data-bs-toggle="dropdown" mat-icon-button class="example-icon ">
-        <mat-icon matBadge="4" matBadgeColor="warn"  color="primary">notifications</mat-icon></button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item notifications-header" href="#"><h3>You have 4 new notifications</h3></a></li>
-      <li><a class="dropdown-item" href="#"> 
-        <div>
-        <img  class="user_img" src="../../../assets/notify.jpg" alt="">
-        <div class="notifications_desc">
-        <p >lorem kfj fkgjfg rtrt r</p>
-        <p>
-        1 hour ago
-        </p>
-    </div>
-   
-      </div></a></li>
-      <li><a class="dropdown-item" href="#">Link 3</a></li>
-    </ul>
+    <button   mat-icon-button class="example-icon ">
+          <mat-icon matBadge="4" matBadgeColor="warn"  color="primary">notifications</mat-icon></button>
+    
   </div>
   <button mat-icon-button class="example-icon " >
     <mat-icon matBadge="4" matBadgeColor="warn" color="primary">mail</mat-icon>
@@ -36,7 +22,7 @@
   <span class="example-spacer">
     <div class="form-group" >
     
-      <input type="text"  class="form-control mx-5 my-5 p-2 float-end me-5" placeholder="Search Books">
+      <input type="text"  class="form-control mx-5 my-5 p-2 float-end me-5" placeholder="Search...">
       <mat-icon class="search-icon" color="primary">search</mat-icon> 
  </div>
 
@@ -82,7 +68,7 @@
         </button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button routerLink="orders" >
+        <button mat-button>
           <mat-icon>shopping_bag</mat-icon>Orders
         </button>
       </mat-list-item>
@@ -92,8 +78,10 @@
    <div style="text-align: center;height:100%;">
     <router-outlet></router-outlet>
   </div>
-    <app-cards></app-cards>
-   
+  <app-cards></app-cards>
+  <app-seconddiv></app-seconddiv>
+   <app-carousel></app-carousel>
+   <app-message></app-message>
   </mat-drawer-container>
 </mat-drawer-container>
 
