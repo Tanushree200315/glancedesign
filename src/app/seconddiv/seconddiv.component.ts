@@ -8,5 +8,7 @@ import{Chart} from 'chart.js'
 })
 export class SeconddivComponent  {
   
-
+   progressValue1=45;
+   progressValue2=70;
+   progressValue3=90;
 }

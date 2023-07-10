@@ -1,19 +1,122 @@
-<div class="container-fluid border" style="width: 100%; height: 400px; ">
-<div class="row">
-    <div class="col-7 border"   style="  height: 400px; ">
+<div class="container-fluid " style="width: 100%; height: 400px; ">
+<div class="row ">
+    <div class="col-7 border1"   style="  height: 400px; ">
    <app-my-chart></app-my-chart>
         </div>
-    <div class="col-3 border" style="  height: 400px; "> 
+    <div class="col-3 b " style="  height: 400px; "> 
+        <div class="row ms-1 me-1 mb-2 border1 " mat-card>
+            <div class="col-6  top-content" style="  height: 120px; ">
+                <p class="mt-4 ms-5 responsive">Sales</p>
+                <h1 class="ms-5 bold responsive">1286+</h1>
+            </div>
+            <div class="col-6  top-content" style="  height: 120px "> 
+               
+                <mat-progress-spinner
+                class="example-margin  mt-2 ms-1"
+                mode="determinate"
+                color="primary"
+                [value]="progressValue1" aria-valuetext="progressValue1 + '%'" >
+            </mat-progress-spinner>
+            <h2 class="progresstext mt-0">{{progressValue1}}%</h2></div>
+        </div>
+        <div class="row ms-1 me-1 mt-3 border1">
+            <div class="col-6 " style="  height: 120px ">
+                <p class="mt-4 ms-5">Reviews</p>
+                <h1 class="ms-5 bold">890+</h1></div>
+                <div class="col-6  top-content" style="  height: 120px "> 
+               
+                    <mat-progress-spinner
+                    class="example-margin ms-3 mt-2"
+                    mode="determinate"
+                    color="accent"
+                    [value]="progressValue2"  >
+                </mat-progress-spinner>
+                <h2 class="progresstext mt-0">{{progressValue2}}%</h2></div>
+        </div>
+       
+        <div class="row ms-1 me-1 mt-3 border1">
+            <div class="col-6 " style="  height: 120px ">
+                <p class="mt-4 ms-5">Visitors</p>
+                <h1 class="ms-5 bold">12990+</h1></div>
+                <div class="col-6 top-content" style="  height: 120px "> 
+               
+                    <mat-progress-spinner
+                    class="example-margin ms-3 mt-2"
+                    mode="determinate"
+                    color="warn"
+                    [value]="progressValue3" aria-valuetext="progressValue3 + '%'" >
+                </mat-progress-spinner>
+                <h2 class="progresstext mt-0">{{progressValue3}}%</h2></div>
+        </div>
     </div>
-    <div class="col-2 border" style="  height: 400px; "> col</div>
+    <div class="col-2 " style="  height: 400px; "> 
+    <div class="row border1">
+        <div class="col-12">
+            <div class="row ">
+                <div class="col-12" style="height: 60px;">
+              <img src="../../assets/facebook.webp" style= "height: 60px; width: 109%; margin-left: -12px;" class="reponsivemedia text-center" alt="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-center " style="height: 60px;">
+                    <h1 class="bold">1,269</h1>
+                    <p class="media-text1">Friends</p>
+                </div>
+                <div class="col-6 text-center " style="height: 60px; "> <h1 class="bold">749</h1>
+                    <p class="media-text1">Likes</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row border1">
+                <div class="col-12" style="height: 60px;">
+                <img src="../../assets/titer.png" style="height: 60px; width: 109%; margin-left: -12px; " class="mt-2" alt=""></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6 text-center " style="height: 60px;">
+                    <h1 class="bold">4,500</h1>
+                    <p class="media-text1">Followers</p>
+                </div>
+                <div class="col-6 text-center " style="height: 60px; "> <h1 class="bold">449</h1>
+                    <p class="media-text1">Tweets</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row mt-3">
+                <div class="col-12" style="height: 60px;">
+                    <img src="../../assets/google.jpg" style= "height: 60px; width: 109%; margin-left: -12px;" class="reponsivemedia text-center" alt=""></div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-6 text-center " style="height: 60px;">
+                    <h1 class="bold">1,269</h1>
+                    <p class="media-text1">Followers</p>
+                </div>
+                <div class="col-6 text-center " style="height: 60px; "> <h1 class="bold">249</h1>
+                    <p class="media-text1">Shares</p>
+                </div>
+            </div>
+    </div>
+    </div>
 </div>
 </div>
+</div>
+
+
 <div class="container-fluid"  style="width: 100%; height: 400px; ">
 <div class="row">
-   
-  
-    <div class="col-4 border" style="  height: 400px; ">col</div>
-    <div class="col-8 border" style="  height: 400px; ">col</div>
+    <div class="col-4 border" style="height: 400px;">
+        <app-barchart></app-barchart>
+    </div>
+    <div class="col-8 border" style="height: 400px;">col</div>
 </div>
+
 </div>
+
 

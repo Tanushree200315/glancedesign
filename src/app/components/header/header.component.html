@@ -1,88 +1,174 @@
-<mat-toolbar color="secondary">
-  <button (click)="drawer.toggle()"
+<mat-toolbar>
+  <button
+    (click)="drawer.toggle()"
     mat-icon-button
     class="example-icon ms-5"
     aria-label="Example icon-button with menu icon"
-
   >
-    <mat-icon >menu</mat-icon>
+    <mat-icon>menu</mat-icon>
   </button>
   <div class="dropdown">
-    <button   mat-icon-button class="example-icon ">
-          <mat-icon matBadge="4" matBadgeColor="warn"  color="primary">notifications</mat-icon></button>
+    <button
+      mat-icon-button
+      class="example-icon dropdown-toggle"
+      id="dropdownMenuButton"
+      data-bs-toggle="dropdown"
+      aria-haspopup="false"
+      aria-expanded="true"
+    >
+      <mat-icon matBadge="4" matBadgeColor="warn" color="primary"
+        >notifications</mat-icon
+      >
+    </button>
+    <div
+      class="dropdown-menu "
+      style="min-width: 280px;  height: 320px;"
     
+      aria-labelledby="dropdownMenuButton"
+    >
+      <a class="dropdown-item " href="#">
+        <div class="container-fluid">
+          <div class="row" style="color: #535252">
+            <div
+              class="col-12"
+              style="
+                font-size: 12px;
+                font-weight: 20px;
+                margin: 0;
+                text-align: center;
+              "
+            >
+              <p>You have 3 new messages</p>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row m-0 p-0">
+              <div class="col-12" style="    position: relative;
+              top: -13px;">
+                <img
+                  src="../../../assets/notify.jpg"
+                  class="user_img rounded-circle mt-3"
+                  alt=""
+                />
+                <p class="notify_desc">Lorem ipsum dolor amet</p>
+                <p class="notify_time">1 Hour ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row m-0 p-0">
+              <div class="col-12" style="    position: relative;
+              top: -34px;">
+                <img
+                  src="../../../assets/notify2.jpg"
+                  class="user_img rounded-circle mt-3"
+                  alt=""
+                />
+                <p class="notify_desc">Lorem ipsum dolor amet</p>
+                <p class="notify_time">1 Hour ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row m-0 p-0">
+              <div class="col-12" style="    position: relative;
+              top: -54px;">
+                <img
+                  src="../../../assets/notify3.jpg"
+                  class="user_img rounded-circle mt-3"
+                  alt=""
+                />
+                <p class="notify_desc">Lorem ipsum dolor amet</p>
+                <p class="notify_time">1 Hour ago</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="col-12 p-1 "
+              style="
+                background-color: rgba(200, 129, 230, 0.14);
+              
+                text-align: center;
+              
+                position: relative;
+                top: -63px;
+              "
+            >
+              <p style="color: #6f6f6f; font-size: 1em ;    height: 16px;">See all messages</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
-  <button mat-icon-button class="example-icon " >
+  <button mat-icon-button class="example-icon">
     <mat-icon matBadge="4" matBadgeColor="warn" color="primary">mail</mat-icon>
   </button>
-  <button mat-icon-button  class="example-icon ">
-    <mat-icon matBadge="4" matBadgeColor="warn" color="primary">task_alt</mat-icon>
+  <button mat-icon-button class="example-icon">
+    <mat-icon matBadge="4" matBadgeColor="warn" color="primary"
+      >task_alt</mat-icon
+    >
   </button>
-  
-  <span class="example-spacer">
-    <div class="form-group" >
-    
-      <input type="text"  class="form-control mx-5 my-5 p-2 float-end me-5" placeholder="Search...">
-      <mat-icon class="search-icon" color="primary">search</mat-icon> 
- </div>
 
+  <span class="example-spacer">
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control mx-5 my-5 p-2 float-end me-5"
+        placeholder="Search..."
+      />
+      <mat-icon class="search-icon" color="primary">search</mat-icon>
+    </div>
   </span>
   <a href="#">
-    <img src="../../../assets/admin.jpg" class="rounded-circle me-5" alt="" [matMenuTriggerFor]="menu" width="40" height="40">
+    <img
+      src="../../../assets/admin.jpg"
+      class="rounded-circle me-5"
+      alt=""
+      [matMenuTriggerFor]="menu"
+      width="40"
+      height="40"
+    />
   </a>
- 
 </mat-toolbar>
 <mat-menu #menu="matMenu">
-    <button mat-menu-item> <mat-icon>settings</mat-icon>Setting</button>
-    <button mat-menu-item><mat-icon>account_circle</mat-icon>  My Account</button>
-    <button mat-menu-item> <mat-icon>work</mat-icon> Profile</button>
-    <button mat-menu-item><mat-icon>logout</mat-icon>Logout</button>
-  </mat-menu>
-<mat-drawer-container autosize hasBackdrop="false" >
-  <mat-drawer #drawer [opened]="false" mode="side"> 
+  <button mat-menu-item><mat-icon>settings</mat-icon>Setting</button>
+  <button mat-menu-item><mat-icon>account_circle</mat-icon> My Account</button>
+  <button mat-menu-item><mat-icon>work</mat-icon> Profile</button>
+  <button mat-menu-item><mat-icon>logout</mat-icon>Logout</button>
+</mat-menu>
+<mat-drawer-container autosize hasBackdrop="false">
+  <mat-drawer #drawer [opened]="false" mode="side">
     <mat-nav-list>
       <mat-list-item>
-        <button mat-button>
-          <mat-icon>dashboard</mat-icon>Dashboard
-        </button>
+        <button mat-button><mat-icon>dashboard</mat-icon>Dashboard</button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button >
-          <mat-icon>home</mat-icon>home
-        </button>
+        <button mat-button><mat-icon>home</mat-icon>home</button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button>
-          <mat-icon>sell</mat-icon>Bestsellers
-        </button>
+        <button mat-button><mat-icon>sell</mat-icon>Bestsellers</button>
       </mat-list-item>
-      
+
       <mat-list-item>
-        <button mat-button >
-          <mat-icon>favorite</mat-icon>Wishlist
-        </button>
+        <button mat-button><mat-icon>favorite</mat-icon>Wishlist</button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button  >
-          <mat-icon>shopping_cart</mat-icon>My cart
-        </button>
+        <button mat-button><mat-icon>shopping_cart</mat-icon>My cart</button>
       </mat-list-item>
       <mat-list-item>
-        <button mat-button>
-          <mat-icon>shopping_bag</mat-icon>Orders
-        </button>
+        <button mat-button><mat-icon>shopping_bag</mat-icon>Orders</button>
       </mat-list-item>
-     </mat-nav-list>  
+    </mat-nav-list>
   </mat-drawer>
   <mat-drawer-container>
-   <div style="text-align: center;height:100%;">
-    <router-outlet></router-outlet>
-  </div>
-  <app-cards></app-cards>
-  <app-seconddiv></app-seconddiv>
-   <app-carousel></app-carousel>
-   <app-message></app-message>
+    <div style="text-align: center; height: 100%">
+      <router-outlet></router-outlet>
+    </div>
+    <app-cards></app-cards>
+    <app-seconddiv></app-seconddiv>
+    <app-carousel></app-carousel>
+    <app-message></app-message>
   </mat-drawer-container>
 </mat-drawer-container>
-
-

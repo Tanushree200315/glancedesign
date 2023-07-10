@@ -13,6 +13,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [],
   imports: [
@@ -31,7 +32,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatListModule,
     MatPaginatorModule,
     MatBadgeModule,
-    MatMenuModule
+    MatMenuModule,
+    MatProgressSpinnerModule
     
   ]
 })

@@ -5,7 +5,7 @@
     width: 400px;
     height: 200px;
     margin: 12px;
-    border: 1px solid #555;
+    border: 1px solid #141212;
   }
   
   mat-drawer-content {
@@ -24,34 +24,36 @@
   }
   .search-icon{
     position: absolute;
-    z-index: 100;
-    right: 8%;
-    top: 2%;
+    z-index: 1;
+    right: 169px;
+    top: 20px;
    
 }
 .exaple-icon{
    position:absolute;
-   left:50px
+   left:50px;
 }
-.notifications_header{
-    background-color: #FAFAFA;
-    padding: 10px 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    margin-bottom: 8px;
+.user_img{
+  margin-left: -23px;
+  float: left;
+  width: 45px;
+  height:  45px;
 }
-ul.dropdown-menu{
-    margin-left: 0;
-    width: 100%;
-    padding: 0;
-    background: #fff;
+.notify_desc{
+  position: relative;
+  top: 13px;
+  left: 14px;
+  color: #757575;
+  font-size: 13px;
+  padding: 2px 0;
 }
-.user_img {
-    float: left;
-    width: 40px;
-    height: 40px;
+.notify_time{
+  color: #979797 !important;
+  font-size: 11px;
+  position: relative;
+  left: 13px;
+  top: -13px;
 }
-.notification_desc {
-    float: left;
-    width: 70%;
-    margin-left: 5%;
+.dropdown-toggle::after {
+  display: none !important;
 }
